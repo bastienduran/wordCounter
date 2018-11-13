@@ -5,8 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test-watch":"jest --watch"
+    "test-watch": "jest --watch"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "regenerator-runtime": "^0.12.1"
+  },
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
 }
