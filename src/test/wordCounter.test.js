@@ -1,3 +1,5 @@
+import wordCounter from '../wordCounter'
 test('find one word',()=>{
-    expect(true).toBe(false)
+    const text ='mot'
+    expect(wordCounter(text)).toEqual({mot:1})
 })
