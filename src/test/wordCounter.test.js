@@ -5,6 +5,10 @@ test("handles empty string", () => {
   expect(wordCounter(text)).toEqual({});
 });
 
+test("handles no params", () => {
+  expect(wordCounter()).toEqual({});
+});
+
 test("find one word", () => {
   const text = "word";
   expect(wordCounter(text)).toEqual({ word: 1 });

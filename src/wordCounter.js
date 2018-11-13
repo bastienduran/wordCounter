@@ -3,7 +3,7 @@ const pattern = /\b([A-z]|[àáâãäåçèéêëìíîïðòóôõöùúûüý�
 const getMatchRegex = text => text.match(pattern);
 
 const wordCounter = text => {
-  if (text !== "") {
+  if (text && text !== "") {
     return getMatchRegex(text).reduce((acc, curr) => {
       if (typeof acc[curr] === "undefined") {
         acc[curr] = 1;
