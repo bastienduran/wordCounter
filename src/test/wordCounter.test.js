@@ -9,6 +9,10 @@ test("handles no params", () => {
   expect(wordCounter()).toEqual({});
 });
 
+test("ingore numbers", () => {
+  expect(wordCounter(1)).toEqual({});
+});
+
 test("find one word", () => {
   const text = "word";
   expect(wordCounter(text)).toEqual({ word: 1 });
