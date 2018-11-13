@@ -38,9 +38,14 @@ test("handles digit in numbers", () => {
   expect(wordCounter(text)).toEqual({ word: 1, test: 1, "word-dash": 1 });
 });
 
-test("handles specials", () => {
+test("ignore words shorter than three letters", () => {
   const text = "me you I";
   expect(wordCounter(text)).toEqual({ you: 1 });
+});
+
+test("handles mixed words and number", () => {
+  const text = "word 1 12 1234";
+  expect(wordCounter(text)).toEqual({ word: 1 });
 });
 
 test("handles specials", () => {
