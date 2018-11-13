@@ -1,5 +1,10 @@
 import wordCounter from "../wordCounter";
 
+test("handles empty string", () => {
+  const text = "";
+  expect(wordCounter(text)).toEqual({});
+});
+
 test("find one word", () => {
   const text = "word";
   expect(wordCounter(text)).toEqual({ word: 1 });
@@ -28,4 +33,9 @@ test("handles digit in numbers", () => {
 test("handles specials", () => {
   const text = "me you I";
   expect(wordCounter(text)).toEqual({ you: 1 });
+});
+
+test("handles specials", () => {
+  const text = "françois";
+  expect(wordCounter(text)).toEqual({ françois: 1 });
 });

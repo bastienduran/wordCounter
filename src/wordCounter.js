@@ -1,16 +1,19 @@
-const pattern = /\b[^\d\W]{3,}(-[^\d\W]+)?\b/g;
+const pattern = /\b([A-z]|[àáâãäåçèéêëìíîïðòóôõöùúûüýÿ]){3,}(-[A-zàáâãäåçèéêëìíîïðòóôõöùúûüýÿ]+)?\b/g;
 
 const getMatchRegex = text => text.match(pattern);
 
 const wordCounter = text => {
-  return getMatchRegex(text).reduce((acc, curr) => {
-    if (typeof acc[curr] === "undefined") {
-      acc[curr] = 1;
-    } else {
-      acc[curr] += 1;
-    }
-    return acc;
-  }, {});
+  if (text !== "") {
+    return getMatchRegex(text).reduce((acc, curr) => {
+      if (typeof acc[curr] === "undefined") {
+        acc[curr] = 1;
+      } else {
+        acc[curr] += 1;
+      }
+      return acc;
+    }, {});
+  }
+  return {};
 };
 
 export default wordCounter;
