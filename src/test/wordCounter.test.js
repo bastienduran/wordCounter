@@ -24,3 +24,8 @@ test("handles digit in numbers", () => {
   const text = "wo2rd word test word-dash";
   expect(wordCounter(text)).toEqual({ word: 1, test: 1, "word-dash": 1 });
 });
+
+test("handles specials", () => {
+  const text = "me you I";
+  expect(wordCounter(text)).toEqual({ you: 1 });
+});

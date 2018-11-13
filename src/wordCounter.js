@@ -1,4 +1,4 @@
-const pattern = /\b[^\d\W]+(-[^\d\W]+)?\b/g;
+const pattern = /\b[^\d\W]{3,}(-[^\d\W]+)?\b/g;
 
 const getMatchRegex = text => text.match(pattern);
 
