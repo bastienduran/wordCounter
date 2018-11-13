@@ -52,3 +52,8 @@ test("handles specials", () => {
   const text = "françois";
   expect(wordCounter(text)).toEqual({ françois: 1 });
 });
+
+test("handles specials in first letter", () => {
+  const text = "églantine, françois";
+  expect(wordCounter(text)).toEqual({ françois: 1, églantine: 1 });
+});
